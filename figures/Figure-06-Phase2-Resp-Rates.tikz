@@ -1,0 +1,309 @@
+\begin{tikzpicture}
+
+	\begin{axis}[
+			title={\textbf{\shortstack{Rat 4}}},
+			width=5cm, height=8cm,
+			axis x line*=bottom,
+			axis y line*=left,
+			xlabel={\textbf{Condition}},
+			ylabel={Number of Responses},
+			xtick={1,2,3},
+			xticklabels={5,6,7},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=3.5,
+			ymin=0, ymax=25,
+			bar width = 1cm,
+			at={(0.0cm, 0cm)},
+			legend style={at={(0.99,0.01)},anchor=south east}
+		]
+
+		\addplot[solid, mark=*, black]
+			table {
+x	y
+-1	-1
+			};
+		\addlegendentry{\footnotesize Food Choices}
+
+		\addplot[mark=diamond*, black, mark options={fill=white}]
+			table {
+x	y
+-1	-1
+			};
+		\addlegendentry{\footnotesize Social Choices}
+
+		\addplot[fill=gray, draw=black, opacity=0.5]
+			table {
+x	y
+0.8	13.561
+0.8	19.272
+1.0	19.272
+1.0	13.561
+0.8	13.561
+
+1.8	10.288
+1.8	14.447
+2.0	14.447
+2.0	10.288
+1.8	10.288
+
+2.8	11.660
+2.8	15.889
+3.0	15.889
+3.0	11.660
+2.8	11.660
+		};
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+2.0	9.389
+2.0	13.663
+2.2	13.663
+2.2	9.389
+2.0	9.389
+
+3.0	7.846
+3.0	12.129
+3.2	12.129
+3.2	7.846
+3.0	7.846
+		};
+
+		\addplot[solid, mark=*, black, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+0.9	16.405	4.271	4.562
+1.9	12.296	2.927	3.726
+2.9	13.723	3.076	3.731
+			};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+2.1	11.447	2.994	3.814
+3.1	9.916	2.979	3.695
+			};
+
+	\end{axis}
+
+	\begin{axis}[
+			title={\textbf{\shortstack{Rat 6}}},
+			width=5cm, height=8cm,
+			axis x line*=bottom,
+			axis y line*=left,
+			xlabel={\textbf{Condition}},
+%			ylabel={Number of Responses},
+			xtick={1,2,3},
+			xticklabels={5,6,7},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=3.5,
+			ymin=0, ymax=25,
+			bar width = 1cm,
+			at={(4.5cm, 0cm)},
+			legend style={at={(0.99,0.99)},anchor=north east}
+		]
+
+		\addplot[fill=gray, draw=black, opacity=0.5]
+			table {
+x	y
+0.8	15.121
+0.8	21.128
+1.0	21.128
+1.0	15.121
+0.8	15.121
+
+1.8	10.872
+1.8	15.493
+2.0	15.493
+2.0	10.872
+1.8	10.872
+
+2.8	12.124
+2.8	16.463
+3.0	16.463
+3.0	12.124
+2.8	12.124
+		};
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+2.0	10.405
+2.0	15.571
+2.2	15.571
+2.2	10.405
+2.0	10.405
+
+3.0	15.118
+3.0	21.653
+3.2	21.653
+3.2	15.118
+3.0	15.118
+		};
+
+		\addplot[solid, mark=*, black, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+0.9	17.988	3.993	5.592
+1.9	13.022	3.047	4.337
+2.9	14.194	2.943	3.854
+			};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+2.1	12.849	3.325	4.518
+3.1	18.269	4.518	5.683
+			};
+
+	\end{axis}
+
+	\begin{axis}[
+			title={\textbf{\shortstack{Rat 8}}},
+			width=5cm, height=8cm,
+			axis x line*=bottom,
+			axis y line*=left,
+			xlabel={\textbf{Condition}},
+%			ylabel={Number of Responses},
+			xtick={1,2,3},
+			xticklabels={5,6,7},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=3.5,
+			ymin=0, ymax=25,
+			bar width = 1cm,
+			at={(9.0cm, 0.0cm)},
+			legend style={at={(0.99,0.99)},anchor=north east}
+		]
+
+		\addplot[fill=gray, draw=black, opacity=0.5]
+			table {
+x	y
+0.8	14.526
+0.8	20.396
+1.0	20.396
+1.0	14.526
+0.8	14.526
+
+1.8	8.640
+1.8	12.901
+2.0	12.901
+2.0	8.640
+1.8	8.640
+
+2.8	10.574
+2.8	15.253
+3.0	15.253
+3.0	10.574
+2.8	10.574
+		};
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+2.0	6.479
+2.0	10.780
+2.2	10.780
+2.2	6.479
+2.0	6.479
+
+3.0	3.751
+3.0	6.923
+3.2	6.923
+3.2	3.751
+3.0	3.751
+		};
+
+		\addplot[solid, mark=*, black, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+0.9	17.363	4.198	5.108
+1.9	10.781	3.152	3.354
+2.9	12.949	3.593	3.720
+			};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+2.1	8.540	2.888	3.442
+3.1	5.259	2.083	2.820
+			};
+
+	\end{axis}
+
+	\begin{axis}[
+			title={\textbf{\shortstack{Mean of Subjects}}},
+			width=5cm, height=8cm,
+			axis x line*=bottom,
+			axis y line*=left,
+			xlabel={\textbf{Condition}},
+%			ylabel={Number of Responses},
+			xtick={1,2,3},
+			xticklabels={5,6,7},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=3.5,
+			ymin=0, ymax=25,
+			bar width = 1cm,
+			at={(13.5cm, 0.0cm)},
+			legend style={at={(0.99,0.99)},anchor=north east}
+		]
+
+		\addplot[fill=gray, draw=black, opacity=0.5]
+			table {
+x	y
+0.8	15.130
+0.8	19.480
+1.0	19.480
+1.0	15.130
+0.8	15.130
+
+1.8	10.608
+1.8	13.537
+2.0	13.537
+2.0	10.608
+1.8	10.608
+
+2.8	12.028
+2.8	15.282
+3.0	15.282
+3.0	12.028
+2.8	12.028
+		};
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+2.0	9.600
+2.0	12.377
+2.2	12.377
+2.2	9.600
+2.0	9.600
+
+3.0	9.773
+3.0	12.612
+3.2	12.612
+3.2	9.773
+3.0	9.773
+		};
+
+		\addplot[solid, mark=*, black, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+0.9	17.252	3.071	3.565
+1.9	12.033	2.105	2.415
+2.9	13.622	2.349	2.632
+			};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+2.1	10.945	1.984	2.252
+3.1	11.148	2.026	2.361
+			};
+
+	\end{axis}
+	
+\end{tikzpicture}

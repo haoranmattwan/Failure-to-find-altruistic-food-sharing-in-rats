@@ -1,0 +1,682 @@
+\begin{tikzpicture}
+
+	\draw[solid] (-0.5cm,0.26cm) -- (-1cm,0.26cm) -- (-1cm,0.46cm) -- (-0.5cm,0.46cm);
+	\draw[solid] (-1cm,0.36cm) -- (-1.1cm,0.36cm) -- (-1.1cm,-2.29cm) -- (-1cm,-2.29cm);
+	\draw[solid] (-0.5cm,-4cm) -- (-1cm,-4cm) -- (-1cm,-0.58cm) -- (-0.5cm,-0.58cm);
+	
+	\begin{axis}[
+			title={\textbf{\shortstack{Rat 4}}},
+			width=5cm, height=10cm,
+			axis x line*=bottom,
+			axis y line*=left,
+%			xlabel={\textbf{Condition}},
+			ylabel={Number of Pellets},
+			xtick={1,2,3,4},
+%			xticklabels={Cond 1, Cond 2, Cond 3, Cond 4},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=4.5,
+			ymin=-10, ymax=300,
+			bar width = 1cm,
+			at={(0.0cm, 0cm)},
+			legend style={at={(0.99,0.99)},anchor=north east}
+		]
+
+		\addplot[solid, mark=*, black]
+			table {
+x	y
+-1	-1
+			};
+		\addlegendentry{\footnotesize Consumed Food}
+
+		\addplot[mark=diamond*, black, mark options={fill=white}]
+			table {
+x	y
+-1	-1
+			};
+		\addlegendentry{\footnotesize Food "Shared"}
+
+		\addplot[fill=gray, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	79.624
+0.9	110.459
+1.1	110.459
+1.1	79.624
+0.9	79.624
+
+1.9	101.329
+1.9	150.827
+2.1	150.827
+2.1	101.329
+1.9	101.329
+
+2.9	91.075
+2.9	120.494
+3.1	120.494
+3.1	91.075
+2.9	91.075
+
+3.9	49.034
+3.9	77.791
+4.1	77.791
+4.1	49.034
+3.9	49.034
+		};
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	0.008
+0.9	0.103
+1.1	0.103
+1.1	0.008
+0.9	0.008
+
+1.9	0.766
+1.9	1.671
+2.1	1.671
+2.1	0.766
+1.9	0.766
+
+2.9	3.531
+2.9	5.439
+3.1	5.439
+3.1	3.531
+2.9	3.531
+
+3.9	0.274
+3.9	1.072
+4.1	1.072
+4.1	0.274
+3.9	0.274
+		};
+
+		\addplot[solid, mark=*, black, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	94.330	21.147	26.311
+2	124.395	31.907	43.863
+3	105.514	21.203	24.621
+4	62.664	18.738	27.168
+			};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	0.048	0.046	0.115
+2	1.187	0.574	0.844
+3	4.453	1.312	1.659
+4	0.633	0.460	0.827
+			};
+
+		\addplot[densely dashed, thick, black]
+			table {
+x	y
+0	0.0
+5	0.0
+			};
+
+	\end{axis}
+
+	\begin{axis}[
+			title={\textbf{\shortstack{Rat 6}}},
+			width=5cm, height=10cm,
+			axis x line*=bottom,
+			axis y line*=left,
+%			xlabel={\textbf{Condition}},
+%			ylabel={Number of Pellets},
+			xtick={1,2,3,4},
+%			xticklabels={Cond 1, Cond 2, Cond 3, Cond 4},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=4.5,
+			ymin=-10, ymax=300,
+			bar width = 1cm,
+			at={(4.5cm, 0cm)},
+			legend style={at={(0.99,0.99)},anchor=north east}
+		]
+
+		\addplot[fill=gray, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	100.993
+0.9	136.634
+1.1	136.634
+1.1	100.993
+0.9	100.993
+
+1.9	158.815
+1.9	225.971
+2.1	225.971
+2.1	158.815
+1.9	158.815
+
+2.9	108.691
+2.9	154.200
+3.1	154.200
+3.1	108.691
+2.9	108.691
+
+3.9	50.122
+3.9	79.675
+4.1	79.675
+4.1	50.122
+3.9	50.122
+		};
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	0.008
+0.9	0.104
+1.1	0.104
+1.1	0.008
+0.9	0.008
+
+1.9	0.934
+1.9	1.984
+2.1	1.984
+2.1	0.934
+1.9	0.934
+
+2.9	0.701
+2.9	1.675
+3.1	1.675
+3.1	0.701
+2.9	0.701
+
+3.9	0.578
+3.9	1.907
+4.1	1.907
+4.1	0.578
+3.9	0.578
+		};
+
+		\addplot[solid, mark=*, black, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	118.205	24.616	30.732
+2	190.715	44.135	59.007
+3	129.928	28.845	41.013
+4	63.986	19.285	26.888
+			};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	0.048	0.046	0.114
+2	1.414	0.652	0.973
+3	1.158	0.619	0.897
+4	1.179	0.771	1.320
+			};
+
+		\addplot[densely dashed, thick, black]
+			table {
+x	y
+0	0.0
+5	0.0
+			};
+
+	\end{axis}
+
+	\begin{axis}[
+			title={\textbf{\shortstack{Rat 8}}},
+			width=5cm, height=10cm,
+			axis x line*=bottom,
+			axis y line*=left,
+%			xlabel={\textbf{Condition}},
+%			ylabel={Number of Pellets},
+			xtick={1,2,3,4},
+%			xticklabels={Cond 1, Cond 2, Cond 3, Cond 4},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=4.5,
+			ymin=-10, ymax=300,
+			bar width = 1cm,
+			at={(9.0cm, 0.0cm)},
+			legend style={at={(0.99,0.99)},anchor=north east}
+		]
+
+		\addplot[fill=gray, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	137.294
+0.9	221.675
+1.1	221.675
+1.1	137.294
+0.9	137.294
+
+1.9	152.153
+1.9	247.594
+2.1	247.594
+2.1	152.153
+1.9	152.153
+
+2.9	83.547
+2.9	125.741
+3.1	125.741
+3.1	83.547
+2.9	83.547
+
+3.9	28.488
+3.9	43.719
+4.1	43.719
+4.1	28.488
+3.9	28.488
+		};
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	0.009
+0.9	0.127
+1.1	0.127
+1.1	0.009
+0.9	0.009
+
+1.9	0.059
+1.9	1.068
+2.1	1.068
+2.1	0.059
+1.9	0.059
+
+2.9	0.016
+2.9	0.462
+3.1	0.462
+3.1	0.016
+2.9	0.016
+
+3.9	0.019
+3.9	0.412
+4.1	0.412
+4.1	0.019
+3.9	0.019
+		};
+
+		\addplot[solid, mark=*, black, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	177.380	53.976	76.839
+2	196.549	60.520	94.057
+3	104.892	30.568	35.327
+4	35.617	9.996	13.891
+			};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	0.059	0.057	0.170
+2	0.483	0.468	0.937
+3	0.194	0.192	0.562
+4	0.179	0.175	0.445
+			};
+
+		\addplot[densely dashed, thick, black]
+			table {
+x	y
+0	0.0
+5	0.0
+			};
+
+	\end{axis}
+
+	\begin{axis}[
+			title={\textbf{\shortstack{Mean of Subjects}}},
+			width=5cm, height=10cm,
+			axis x line*=bottom,
+			axis y line*=left,
+%			xlabel={\textbf{Condition}},
+%			ylabel={Number of Pellets},
+			xtick={1,2,3,4},
+%			xticklabels={Cond 1, Cond 2, Cond 3, Cond 4},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=4.5,
+			ymin=-10, ymax=300,
+			bar width = 1cm,
+			at={(13.5cm, 0.0cm)},
+			legend style={at={(0.99,0.99)},anchor=north east}
+		]
+
+		\addplot[fill=gray, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	114.657
+0.9	146.806
+1.1	146.806
+1.1	114.657
+0.9	114.657
+
+1.9	149.812
+1.9	193.470
+2.1	193.470
+2.1	149.812
+1.9	149.812
+
+2.9	101.638
+2.9	126.024
+3.1	126.024
+3.1	101.638
+2.9	101.638
+
+3.9	46.726
+3.9	62.134
+4.1	62.134
+4.1	46.726
+3.9	46.726
+		};
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	0.013
+0.9	0.106
+1.1	0.106
+1.1	0.013
+0.9	0.013
+
+1.9	0.745
+1.9	1.338
+2.1	1.338
+2.1	0.745
+1.9	0.745
+
+2.9	1.577
+2.9	2.317
+3.1	2.317
+3.1	1.577
+2.9	1.577
+
+3.9	0.402
+3.9	0.960
+4.1	0.960
+4.1	0.402
+3.9	0.402
+		};
+
+		\addplot[solid, mark=*, black, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	129.972	22.022	28.104
+2	170.553	30.449	38.288
+3	113.444	17.123	20.719
+4	54.089	10.815	13.149
+			};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	0.052	0.046	0.107
+2	1.028	0.397	0.517
+3	1.935	0.508	0.616
+4	0.663	0.349	0.524
+			};
+
+		\addplot[densely dashed, thick, black]
+			table {
+x	y
+0	0.0
+5	0.0
+			};
+
+	\end{axis}
+
+	\begin{axis}[
+%			title={\textbf{\shortstack{Rat 4}}},
+			width=5cm, height=5cm,
+			axis x line*=bottom,
+			axis y line*=left,
+			xlabel={\textbf{Condition}},
+			ylabel={Number of Pellets},
+			xtick={1,2,3,4},
+%			xticklabels={Cond 1, Cond 2, Cond 3, Cond 4},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=4.5,
+			ymin=0, ymax=7,
+			bar width = 1cm,
+			at={(0.0cm, -4cm)},
+			legend style={at={(0.99,0.99)},anchor=north east}
+		]
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	0.008
+0.9	0.103
+1.1	0.103
+1.1	0.008
+0.9	0.008
+
+1.9	0.766
+1.9	1.671
+2.1	1.671
+2.1	0.766
+1.9	0.766
+
+2.9	3.531
+2.9	5.439
+3.1	5.439
+3.1	3.531
+2.9	3.531
+
+3.9	0.274
+3.9	1.072
+4.1	1.072
+4.1	0.274
+3.9	0.274
+		};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	0.048	0.046	0.115
+2	1.187	0.574	0.844
+3	4.453	1.312	1.659
+4	0.633	0.460	0.827
+			};
+
+		\addplot[densely dashed, thick, black]
+			table {
+x	y
+0	0.0
+5	0.0
+			};
+
+	\end{axis}
+
+	\begin{axis}[
+%			title={\textbf{\shortstack{Rat 6}}},
+			width=5cm, height=5cm,
+			axis x line*=bottom,
+			axis y line*=left,
+			xlabel={\textbf{Condition}},
+%			ylabel={Number of Pellets},
+			xtick={1,2,3,4},
+%			xticklabels={Cond 1, Cond 2, Cond 3, Cond 4},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=4.5,
+			ymin=0, ymax=7,
+			bar width = 1cm,
+			at={(4.5cm, -4cm)},
+			legend style={at={(0.99,0.99)},anchor=north east}
+		]
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	0.008
+0.9	0.104
+1.1	0.104
+1.1	0.008
+0.9	0.008
+
+1.9	0.934
+1.9	1.984
+2.1	1.984
+2.1	0.934
+1.9	0.934
+
+2.9	0.701
+2.9	1.675
+3.1	1.675
+3.1	0.701
+2.9	0.701
+
+3.9	0.578
+3.9	1.907
+4.1	1.907
+4.1	0.578
+3.9	0.578
+		};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	0.048	0.046	0.114
+2	1.414	0.652	0.973
+3	1.158	0.619	0.897
+4	1.179	0.771	1.320
+			};
+
+		\addplot[densely dashed, thick, black]
+			table {
+x	y
+0	0.0
+5	0.0
+			};
+
+	\end{axis}
+
+	\begin{axis}[
+%			title={\textbf{\shortstack{Rat 8}}},
+			width=5cm, height=5cm,
+			axis x line*=bottom,
+			axis y line*=left,
+			xlabel={\textbf{Condition}},
+%			ylabel={Number of Pellets},
+			xtick={1,2,3,4},
+%			xticklabels={Cond 1, Cond 2, Cond 3, Cond 4},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=4.5,
+			ymin=0, ymax=7,
+			bar width = 1cm,
+			at={(9.0cm, -4cm)},
+			legend style={at={(0.99,0.99)},anchor=north east}
+		]
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	0.009
+0.9	0.127
+1.1	0.127
+1.1	0.009
+0.9	0.009
+
+1.9	0.059
+1.9	1.068
+2.1	1.068
+2.1	0.059
+1.9	0.059
+
+2.9	0.016
+2.9	0.462
+3.1	0.462
+3.1	0.016
+2.9	0.016
+
+3.9	0.019
+3.9	0.412
+4.1	0.412
+4.1	0.019
+3.9	0.019
+		};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	0.059	0.057	0.170
+2	0.483	0.468	0.937
+3	0.194	0.192	0.562
+4	0.179	0.175	0.445
+			};
+
+		\addplot[densely dashed, thick, black]
+			table {
+x	y
+0	0.0
+5	0.0
+			};
+
+	\end{axis}
+
+	\begin{axis}[
+%			title={\textbf{\shortstack{Mean of Subjects}}},
+			width=5cm, height=5cm,
+			axis x line*=bottom,
+			axis y line*=left,
+			xlabel={\textbf{Condition}},
+%			ylabel={Number of Pellets},
+			xtick={1,2,3,4},
+%			xticklabels={Cond 1, Cond 2, Cond 3, Cond 4},
+			scaled x ticks=false,
+%			ytick={0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0},
+			xmin=0.5, xmax=4.5,
+			ymin=0, ymax=7,
+			bar width = 1cm,
+			at={(13.5cm, -4cm)},
+			legend style={at={(0.99,0.99)},anchor=north east}
+		]
+
+		\addplot[fill=white, draw=black, opacity=0.5]
+			table {
+x	y
+0.9	0.013
+0.9	0.106
+1.1	0.106
+1.1	0.013
+0.9	0.013
+
+1.9	0.745
+1.9	1.338
+2.1	1.338
+2.1	0.745
+1.9	0.745
+
+2.9	1.577
+2.9	2.317
+3.1	2.317
+3.1	1.577
+2.9	1.577
+
+3.9	0.402
+3.9	0.960
+4.1	0.960
+4.1	0.402
+3.9	0.402
+		};
+
+		\addplot[solid, mark=diamond*, black, mark options={fill=white}, error bars/.cd, y dir=both, y explicit]
+			table [x=x, y=y, y error plus=eyp, y error minus=eym] {
+x	y		eym	eyp
+1	0.052	0.046	0.107
+2	1.028	0.397	0.517
+3	1.935	0.508	0.616
+4	0.663	0.349	0.524
+			};
+
+		\addplot[densely dashed, thick, black]
+			table {
+x	y
+0	0.0
+5	0.0
+			};
+
+	\end{axis}
+
+
+\end{tikzpicture}
